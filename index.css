@@ -1,0 +1,245 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  overflow: hidden;
+  background-color: aliceblue;
+  display: flex;
+  height: 100vh;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.main-container {
+  display: flex;
+  gap: 1rem;
+  height: 34vh;
+  width: auto;
+  box-shadow: 13px 11px 44px -22px rgba(0, 0, 0, 0.43);
+  -webkit-box-shadow: 13px 11px 44px -22px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 13px 11px 44px -22px rgba(0, 0, 0, 0.43);
+  background-color: white;
+  border-radius: 15px;
+}
+
+.drawers {
+  width: 20rem;
+  height: auto;
+  border-radius: 13px 0 0 13px;
+}
+
+aside {
+  padding: 1rem;
+  position: relative;
+}
+
+aside h2 {
+  font-weight: 500;
+  color: hsl(217, 19%, 35%);
+  font-size: 20px;
+  width: 340px;
+}
+
+aside p {
+  font-size: 13px;
+  color: hsl(214, 17%, 51%);
+  width: 350px;
+}
+
+.identity {
+  display: flex;
+  gap: 10px;
+}
+
+.identity img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.nameDate {
+  width: 10rem;
+}
+
+.nameDate h3 {
+  margin: 0;
+  font-size: 13px;
+  color: hsl(217, 19%, 35%);
+}
+
+.nameDate p {
+  margin: 0;
+  color: hsl(212, 23%, 69%);
+  width: auto;
+}
+
+.fa-solid {
+  background-color: hsl(210, 46%, 95%);
+  padding: 7px;
+  border-radius: 100%;
+  color: #48556a;
+  margin-left: 6rem;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.main-navbar {
+  /* display: none; */
+  z-index: 12;
+}
+
+.navBar {
+  display: flex;
+  gap: 10px;
+  padding: 0 2rem 0 2rem;
+  color: #9eafc2;
+  z-index: 1;
+  background-color: hsl(217, 19%, 35%);
+  width: 13rem;
+  height: 6vh;
+  position: absolute;
+  right: -4rem;
+  bottom: 6rem;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 5px;
+  border-radius: 10px;
+}
+
+.navBar img {
+  width: 15px;
+  height: 15px;
+  margin-top: 14px;
+}
+
+.navBar h1 {
+  content: "";
+  position: relative;
+  height: 0px;
+  width: 0px;
+  top: 1.6rem;
+  right: 5.8rem;
+  /* 1px buffer for zooming problems while rendering*/
+  border-width: 18px;
+  border-color: transparent hsl(217, 19%, 35%) transparent transparent;
+  border-style: solid;
+  transform: rotate(0.75turn);
+  ;
+}
+
+.navBar .fa-solid {
+  display: none;
+}
+
+.bg-dark {
+  background-color: hsl(212, 23%, 69%);
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+@media (max-width: 375px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+  }
+
+  .asideParagraph {
+    width: 100%;
+  }
+
+  body {
+    display: block;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .drawers {
+    width: auto;
+    border-radius: 13px 13px 0 0;
+  }
+
+  aside {
+    padding: 0 0 1rem 2rem;
+    width: 100%;
+  }
+
+  aside h2 {
+    font-weight: 500;
+    color: hsl(217, 19%, 35%);
+    font-size: 17px;
+    width: 280px;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  aside p {
+    line-height: 1.5;
+    width: 16rem;
+
+  }
+
+  .fa-solid {
+    margin-left: 0;
+  }
+
+  /* .main-navbar {
+    display: none;
+  } */
+
+  .navBar {
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+    height: 9vh;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 0 0 10px 10px;
+    padding-left: 2rem;
+    gap: 1rem;
+  }
+
+  .navBar h1 {
+    display: none;
+  }
+
+  .navBar p {
+    width: auto;
+  }
+
+  .navBar img {
+    width: 20px;
+    height: 20px;
+    margin-top: -1px;
+  }
+
+  .fa-solid {
+    position: relative;
+    z-index: 2;
+    top: 2px;
+  }
+}
